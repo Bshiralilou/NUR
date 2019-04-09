@@ -2,6 +2,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+f = open('integral_2a.txt', 'r')
+lines = tuple(f)
+a=float(lines[0])
+b=float(lines[1])
+c=float(lines[2])
+A=float(lines[3])
+
 def interpolate( x, y, xi):
     
     n = len(x)
@@ -49,5 +56,4 @@ plt.plot(x_new, y_new)
 plt.xlabel('x')
 plt.ylabel('logn(x)')
 plt.savefig('./Plots/interp_2b.png')
-plt.show()
 plt.close()

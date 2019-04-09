@@ -40,4 +40,5 @@ def ridder (A, a, b, c, x):
 
 numerical = ridder(A,a,b,c,b)
 analytical = 100.*A*(a - c -3.)/(b * np.e)
+print("analytical:",analytical,"numerical:",numerical)
 np.savetxt('df_2c.txt', np.array([numerical, analytical]) )

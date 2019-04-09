@@ -26,7 +26,6 @@ plt.scatter( rands_scatt[0:998], rands_scatt[1:999], marker= '.' )
 plt.xlabel(r'$x_i$')
 plt.ylabel(r'$x_{i+1}$')
 plt.savefig('./Plots/scatt_1b.png')
-plt.show()
 plt.close()
 
 
@@ -41,13 +40,14 @@ plt.hist( rands_hist, bins )
 plt.xlabel(r'$x_{random}$')
 plt.ylabel("frequency")
 plt.savefig('./Plots/hist_1b.png')
-plt.show()
 plt.close()
 
 #----- Generating random values
+
 
 a = 1.1+(2.5-1.1)*rand()
 b = 0.5+(2.-0.5)*rand()
 c = 1.5+(4.-1.5)*rand()
 
 np.savetxt('random.txt', np.array([a, b, c]))
+

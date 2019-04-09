@@ -40,5 +40,5 @@ plt.legend()
 plt.xlabel('log(x)')
 plt.ylabel('log p(x)')
 plt.savefig('./Plots/hist_2e.png')
-plt.show()
+plt.close()
   
