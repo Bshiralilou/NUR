@@ -1,0 +1,5 @@
+\section{(2.h)}
+In this section, we have re-written the Romberg integration from part 2.a to calculate the value of A. \footnote{The relevant intervals for (a, b, c) are given by hand because I saw that they are not accurate when they get written in the file if I give them by np.arange()}. The values for the parameters and the corresponding normalization factor A are given in the file \url{2h.txt}.\\
+In order to 3D interpolate for values of A, we have used trilinear interpolation method. The method finds the position of the point which we want to interpolate in a grid of (a, b, c) values, meaning that it find the 8 nearest grid points to the interpolation point. Based on these 8 points the code interpolates along each axis ( a then b then c) and combines these interpolations to give the final interpolated result. 
+
+\lstinputlisting{two_h.py}

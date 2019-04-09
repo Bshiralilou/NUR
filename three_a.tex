@@ -1,0 +1,7 @@
+\section{(3.a)}
+In order to minimize the loglikelihood for the distribution of galaxies, we have used the conjugate gradient method. In this way we only need the first derivative of the loglikelihood function to be calculated. We have calculated the expressions for the first derivatives analytically. \\
+The derivative of loglikelihood is dependent on the derivatives of parameter A with respect to parameters of the model (p). For finding these derivatives we have used the interpolation function from part 2.h and the basic definition of the differentiation being $\frac{dA(p)}{dp_{i}}= \frac{A(p_{i}+h0) -A(p_{i}-h0)}{2h0}$.\\
+In order to find the best value for the step size $\alpha$, we have put an initial guess of (1e-4, 1e-4, 1e-4). This initial value has to be chosen wisely: If this value be very large, then the next best calculated values for the parameters $p = (a, b, c)$ will get outside the bound of interpolation grid for A. Moreover, if this value be too small then the iteration takes very long. Due to lack of time (!) we have used scipy.optimize package for finding alpha.\\
+FINAL NOTE: This code is not complete as it is just calculating likelihood and minimization for only 'one example data point', here being x=1. Sadly I did not have enough time to complete it.
+
+\lstinputlisting{three_a.py}

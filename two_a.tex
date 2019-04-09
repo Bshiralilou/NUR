@@ -1,0 +1,10 @@
+\section{(2.a)}
+The code below uses the Romberg integration method to compute the value of normalization factor A. \\
+The value of n in the code is chosen in such a way to reach a good accuracy in a reasonable time period.\\
+Note that for the calculations, it is better to write the function f as $x^{a-1}\times (rest)$ rather than $x^{a-3}\times x^2 \times (rest)$. In this way the function behaves smoothly at small values of x and division by zero does not happen.
+
+\lstinputlisting{two_a.py}
+
+The Resulting values for a, b, c and A, used for the rest of the problems are as follows:
+
+\lstinputlisting{integral_2a.txt}

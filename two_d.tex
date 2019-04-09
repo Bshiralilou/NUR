@@ -1,0 +1,12 @@
+\section{(2.d)}
+Since the inverse of the distribution can not be found easily, we have used rejection sampling to find coordinate r for each satellite. In the method, $y \sim [0, p_{max})$ where $p_{max}$ is the peak value of the probability distribution and is found analytically.\\
+%The figure .. shows the probability distribution $p(x)$. As we can see the probability values are very close to zero at very low x values, as well as $x>3$. This behavior might change if the random parameters change but still is usually dominant.\\
+%In order to have better and faster sampling from this distribution around these values of x, we have instead sampled from the log of the distribution.
+%\footnote{I have tested and have seen that if I sample from $p(x)$, I miss samples at large and high x values. This might be due to my random generator which is not generating well...}\\
+Here we also sample $\theta$ and $\phi$ based on the distribution seen in exercise class:\\
+$\theta= cos^{-1}(1-2U(0,1))$ , $\phi= 2\pi U(0,1)$\\
+This is because uniform sampling (as we saw in the exercise) over samples around the poles.
+
+\lstinputlisting{two_d.py}
+
+The sampled values $(r, \phi, \theta)$ based on the random parameters a, b and c listed before can be found in  \url{satellites_2d.txt}
