@@ -4,17 +4,17 @@ echo "Run handin excercises"
 
 echo "Creating the plotting directory if it does not exist"
 if [ ! -d "Plots" ]; then
-  mkdir plots
+  mkdir Plots
 fi
 
 echo "Run problem one.a ..."
-python3 one_a.py
+python3 one_a.py > poisson_rands.txt
 
 echo "Run problem one.b ..."
-python3 one_b.py > seedvalue.txt
+python3 one_b.py 
 
 echo "Run problem two.a ..."
-python3 two_a.py > poisson_rands.txt
+python3 two_a.py 
 
 echo "Run problem two.b ..."
 python3 two_b.py

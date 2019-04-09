@@ -77,6 +77,7 @@ print ("The sorted array is: ", components)
 np.savetxt('sortarray_2g.txt', components )
  
 median, perc16, perc84 = statistics(components, len(components))
+np.savetxt('statistics_2g.txt', np.array([median, perc16, perc84]))
 
 #----- The histogram and Poisson distribution
 

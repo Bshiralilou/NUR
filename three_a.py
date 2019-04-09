@@ -27,9 +27,9 @@ def gradient( a_init, b_init, c_init, x = 1):
     A_c = (trilinear(a_init, b_init, c_init-h0) - trilinear(a_init, b_init, c_init+h0))/(2.*h0)
     
     # Gradient values, calculated analytically
-    d_a = A_a/A + np.log10(x/b)
-    d_b = A_b/A - (a + 3.)/b - (c/b)*(x/b)**c
-    d_c = A_c/A + np.log10(x/b)*(x/b)**c
+    d_a = A_a/A + np.log10(x/b_init)
+    d_b = A_b/A - (a_init + 3.)/b_init - (c_init/b_init)*(x/b_init)**c_init
+    d_c = A_c/A + np.log10(x/b_init)*(x/b_init)**c_init
     
     return np.array([d_a, d_b, d_c])
     
